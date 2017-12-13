@@ -1,0 +1,9 @@
+name: python
+os: RedHat, CentOS, Ubuntu, Debian
+os_family: RedHat, Debian
+version: 201712
+release: 1
+summary: SaltStack formula for installing a specific version of Python to be used with deployed applications
+description: SaltStack formula for installing a specific version of Python to be used with deployed applications
+top_level_dir: python
+recommended: 

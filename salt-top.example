@@ -1,0 +1,6 @@
+base:
+  '*':
+    - python
+    
+    - python.tests
+    

@@ -1,0 +1,7 @@
+# -*- mode: yaml -*-
+python:
+  overrides:
+    pkg: python
+    conf_file: /usr/local/etc/python/python.conf
+  config:
+    key: othervalue
