@@ -1,10 +1,12 @@
 {% from "python/map.jinja" import python with context %}
 
-include:
-  - .service
-
-python:
+python_build_dependencies:
   pkg.installed:
     - pkgs: {{ python.pkgs }}
-    - require_in:
-        - service: python_service_running
+
+{% for version in python.versions %}
+install_global_python_version_{{ version }}:
+  pyenv.installed:
+    - name: {{ version }}
+    - user: root
+{% endfor %}
