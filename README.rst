@@ -19,12 +19,7 @@ Available states
 ``python``
 ----------
 
-TODO - add description of this state
-
-``python.conf``
----------------
-
-TODO - add description of this state
+Installs the specified version of Python using pyenv and pybuilder
 
 
 Template

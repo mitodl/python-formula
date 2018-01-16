@@ -1,14 +1,30 @@
 {% set python = salt.grains.filter_by({
     'default': {
-        'pkgs': ['python'],
-        'service': 'python',
         'conf_file': '/etc/python/python.conf',
-        'config': {
-            'key': 'value',
-        },
+        'versions': ['3.6.3']
     },
     'Debian': {
+        'pkgs': [
+            'git',
+            'zlib1g-dev',
+            'libbz2-dev',
+            'build-essential',
+            'libssl-dev',
+            'libsqlite3-dev',
+            'libreadline-dev',
+            'curl'
+        ]
     },
     'RedHat': {
+        'pkgs': [
+            'git',
+            'make',
+            'gcc',
+            'curl',
+            'openssl-devel',
+            'zlib-devel',
+            'readline-devel',
+            'bzip2-devel'
+        ]
     },
 }, grain='os_family', merge=salt.pillar.get('python:overrides'), base='default') %}
