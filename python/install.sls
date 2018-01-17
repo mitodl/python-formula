@@ -10,3 +10,8 @@ install_global_python_version_{{ version }}:
     - name: {{ version }}
     - user: root
 {% endfor %}
+
+prepend_pyenv_shims_to_default_path:
+  file.append:
+    - name: /etc/profile
+    - text: PATH="/usr/local/pyenv/shims:$PATH"
