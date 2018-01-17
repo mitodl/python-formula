@@ -1,7 +1,12 @@
 {% set python = salt.grains.filter_by({
     'default': {
         'conf_file': '/etc/python/python.conf',
-        'versions': ['3.6.3']
+        'versions': [
+            {
+                'number': '3.6.3',
+                'default': True
+            }
+        ]
     },
     'Debian': {
         'pkgs': [
