@@ -1,6 +1,5 @@
 {% set python = salt.grains.filter_by({
     'default': {
-        'conf_file': '/etc/python/python.conf',
         'versions': [
             {
                 'number': '3.6.3',
@@ -32,4 +31,4 @@
             'bzip2-devel'
         ]
     },
-}, grain='os_family', merge=salt.pillar.get('python:overrides'), base='default') %}
+}, grain='os_family', merge=salt.pillar.get('python'), base='default') %}
